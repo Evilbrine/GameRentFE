@@ -1,0 +1,125 @@
+.loginContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    transition: background 0.5s ease;
+}
+
+    .loginContainer.registerMode {
+        background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+    }
+
+.loginBox {
+    background: white;
+    padding: 2.5rem;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 400px;
+}
+
+    .loginBox h2 {
+        text-align: center;
+        margin-bottom: 1.5rem;
+        color: #333;
+        font-size: 1.8rem;
+    }
+
+    .loginBox input {
+        width: 100%;
+        padding: 0.9rem;
+        margin-bottom: 1rem;
+        border: 2px solid #e0e0e0;
+        border-radius: 6px;
+        font-size: 1rem;
+        transition: border-color 0.3s ease;
+        box-sizing: border-box;
+    }
+
+        .loginBox input:focus {
+            outline: none;
+            border-color: #667eea;
+        }
+
+    .loginBox button[type="submit"] {
+        width: 100%;
+        padding: 0.9rem;
+        background-color: #667eea;
+        color: white;
+        border: none;
+        border-radius: 6px;
+        font-size: 1.1rem;
+        font-weight: 600;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        margin-top: 0.5rem;
+    }
+
+        .loginBox button[type="submit"]:hover {
+            background-color: #5568d3;
+        }
+
+.registerMode .loginBox button[type="submit"] {
+    background-color: #f5576c;
+}
+
+    .registerMode .loginBox button[type="submit"]:hover {
+        background-color: #e04357;
+    }
+
+.error {
+    background-color: #fee;
+    color: #c33;
+    padding: 0.8rem;
+    border-radius: 6px;
+    margin-bottom: 1rem;
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+.success {
+    background-color: #efe;
+    color: #3c3;
+    padding: 0.8rem;
+    border-radius: 6px;
+    margin-bottom: 1rem;
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+.toggleMode {
+    margin-top: 1.5rem;
+    text-align: center;
+    color: #666;
+    font-size: 0.95rem;
+}
+
+    .toggleMode span {
+        display: block;
+        margin-bottom: 0.5rem;
+    }
+
+.toggleButton {
+    background: none;
+    border: none;
+    color: #667eea;
+    font-weight: 600;
+    cursor: pointer;
+    text-decoration: underline;
+    font-size: 0.95rem;
+    padding: 0;
+}
+
+    .toggleButton:hover {
+        color: #5568d3;
+    }
+
+.registerMode .toggleButton {
+    color: #f5576c;
+}
+
+    .registerMode .toggleButton:hover {
+        color: #e04357;
+    }

@@ -1,0 +1,783 @@
+.dashboardContainer {
+  background-color: white;
+  color: #333;
+  min-height: 85vh;
+  padding: 2rem;
+  font-family: "Segoe UI", sans-serif;
+  text-align: center;
+}
+
+.dashboardBar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(to right, #5a0000, #230000);
+    padding: 15px;
+}
+
+.dashboardContainer h1 {
+  margin-bottom: 1rem;
+  color: #333;
+  font-weight: bold;
+  font-size: 40px;
+}
+
+.dashboardContainer p {
+  margin-bottom: 2rem;
+  color: #555;
+}
+
+.dashboardContainer button {
+    padding: 0.8rem 1.2rem;
+    background-color: #e25930;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    height: 50px;
+    margin: 10px;
+}
+
+.dashboardBar button {
+    padding: 0.8rem 1.2rem;
+    background-color: #e25930;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    height: 50px;
+}
+
+.tileGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  padding: 2rem;
+}
+
+.tile {
+  background-color: #0077cc;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  padding: 2rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+  cursor: pointer;
+  width: 100%;
+  height: 280px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.tile:hover {
+  background-color: #005fa3;
+  transform: scale(1.02);
+}
+
+.tile2 {
+  background-color: #3b763b;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  padding: 2rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+  cursor: pointer;
+  width: 100%;
+  height: 280px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.tile2:hover {
+  background-color: #2f5f2f;
+  transform: scale(1.02);
+}
+
+.filterContainer {
+    background-color: #eeeeee;
+    border: none;
+    border-radius: 6px;
+}
+
+.filterButton {
+    padding: 0.8rem 1.2rem;
+    background-color: #e25930;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    height: 50px;
+    transition: background-color 0.3s ease;
+}
+
+    .filterButton:hover {
+        background-color: #c74d28;
+    }
+
+.filterButtonActive {
+    padding: 0.8rem 1.2rem;
+    background-color: #3b763b !important;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    height: 50px;
+}
+
+    .filterButtonActive:hover {
+        background-color: #2f5f2f !important;
+    }
+
+.filterButtonPlatform {
+    padding: 0.8rem 1.2rem;
+    background-color: #e25930;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    height: 50px;
+    transition: background-color 0.3s ease;
+}
+
+    .filterButtonPlatform:hover {
+        background-color: #c74d28;
+    }
+
+.filterButtonPlatformActive {
+    padding: 0.8rem 1.2rem;
+    background-color: #3b763b !important;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    height: 50px;
+}
+
+    .filterButtonPlatformActive:hover {
+        background-color: #2f5f2f !important;
+    }
+
+.slider {
+    width: 100%;
+    height: 8px;
+    border-radius: 5px;
+    background: linear-gradient(to right, #ddd 0%, #ddd 100%);
+    outline: none;
+    opacity: 0.9;
+    transition: opacity 0.2s;
+    -webkit-appearance: none;
+    appearance: none;
+}
+
+    .slider:hover {
+        opacity: 1;
+    }
+
+    .slider::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        appearance: none;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        background: #3b763b;
+        cursor: pointer;
+        transition: background-color 0.3s ease, transform 0.2s ease;
+    }
+
+        .slider::-webkit-slider-thumb:hover {
+            background: #2f5f2f;
+            transform: scale(1.2);
+        }
+
+    .slider::-moz-range-thumb {
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        background: #3b763b;
+        cursor: pointer;
+        border: none;
+        transition: background-color 0.3s ease, transform 0.2s ease;
+    }
+
+        .slider::-moz-range-thumb:hover {
+            background: #2f5f2f;
+            transform: scale(1.2);
+        }
+
+    .slider::-moz-range-track {
+        width: 100%;
+        height: 8px;
+        border-radius: 5px;
+        background: #ddd;
+    }
+
+.navButtons {
+    display: flex;
+    gap: 10px;
+    flex: 1;
+    justify-content: center;
+}
+
+.loginButton {
+    padding: 0.8rem 1.2rem;
+    background-color: #e25930;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    height: 50px;
+    margin-left: auto;
+}
+
+    .loginButton:hover {
+        background-color: #c74d28;
+    }
+
+.topBar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(to right, #5a0000, #230000);
+    padding: 15px 30px;
+}
+
+    .topBar h1 {
+        color: white;
+        font-size: 1.8rem;
+        margin: 0;
+    }
+
+.logoutButton {
+    padding: 0.8rem 1.5rem;
+    background-color: #e25930;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+}
+
+    .logoutButton:hover {
+        background-color: #c74d28;
+    }
+
+.container {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: #f9f9f9;
+    min-height: 80vh;
+}
+
+.profileSection {
+    background: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
+}
+
+    .profileSection h2 {
+        color: #333;
+        margin-bottom: 1.5rem;
+        font-size: 1.6rem;
+        border-bottom: 2px solid #e25930;
+        padding-bottom: 0.5rem;
+    }
+
+.userInfo {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.infoRow {
+    display: flex;
+    gap: 0.5rem;
+    font-size: 1.1rem;
+    padding: 0.5rem 0;
+}
+
+    .infoRow strong {
+        color: #555;
+        min-width: 120px;
+    }
+
+.editButton {
+    margin-top: 1rem;
+    padding: 0.8rem 1.5rem;
+    background-color: #3b763b;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+    width: fit-content;
+}
+
+    .editButton:hover {
+        background-color: #2f5f2f;
+    }
+
+.editForm {
+    margin-top: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.formGroup {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+    .formGroup label {
+        font-weight: 600;
+        color: #555;
+    }
+
+    .formGroup input {
+        padding: 0.8rem;
+        border: 2px solid #e0e0e0;
+        border-radius: 6px;
+        font-size: 1rem;
+        transition: border-color 0.3s ease;
+    }
+
+        .formGroup input:focus {
+            outline: none;
+            border-color: #3b763b;
+        }
+
+.buttonGroup {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.saveButton {
+    padding: 0.8rem 1.5rem;
+    background-color: #3b763b;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+    .saveButton:hover {
+        background-color: #2f5f2f;
+    }
+
+.cancelButton {
+    padding: 0.8rem 1.5rem;
+    background-color: #999;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+    .cancelButton:hover {
+        background-color: #777;
+    }
+
+.rentalsSection {
+    background: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+    .rentalsSection h2 {
+        color: #333;
+        margin-bottom: 1.5rem;
+        font-size: 1.6rem;
+        border-bottom: 2px solid #e25930;
+        padding-bottom: 0.5rem;
+    }
+
+.noRentals {
+    text-align: center;
+    color: #999;
+    font-size: 1.1rem;
+    padding: 2rem;
+}
+
+.rentalsList {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.rentalCard {
+    display: flex;
+    gap: 1.5rem;
+    padding: 1.5rem;
+    border-radius: 8px;
+    transition: transform 0.2s ease;
+}
+
+    .rentalCard.active {
+        background-color: #fff8e1;
+        border: 2px solid #ffc107;
+    }
+
+    .rentalCard.returned {
+        background-color: #f5f5f5;
+        border: 2px solid #ccc;
+    }
+
+    .rentalCard:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    }
+
+.gameArtwork {
+    width: 120px;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 6px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.rentalInfo {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+    .rentalInfo h3 {
+        color: #333;
+        font-size: 1.3rem;
+        margin: 0;
+    }
+
+.platform {
+    color: #666;
+    font-size: 0.95rem;
+    font-weight: 600;
+    margin: 0;
+}
+
+.dates {
+    margin-top: 0.5rem;
+}
+
+    .dates p {
+        margin: 0.3rem 0;
+        color: #555;
+        font-size: 0.95rem;
+    }
+
+.statusBadge {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-top: auto;
+}
+
+.activeBadge {
+    background-color: #4caf50;
+    color: white;
+    padding: 0.4rem 1rem;
+    border-radius: 20px;
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+.returnedBadge {
+    background-color: #999;
+    color: white;
+    padding: 0.4rem 1rem;
+    border-radius: 20px;
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+.returnButton {
+    padding: 0.5rem 1rem;
+    background-color: #e25930;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: background-color 0.3s ease;
+}
+
+    .returnButton:hover {
+        background-color: #c74d28;
+    }
+
+.error {
+    background-color: #fee;
+    color: #c33;
+    padding: 0.8rem;
+    border-radius: 6px;
+    margin: 1rem 0;
+    text-align: center;
+}
+
+.success {
+    background-color: #efe;
+    color: #3c3;
+    padding: 0.8rem;
+    border-radius: 6px;
+    margin: 1rem 0;
+    text-align: center;
+}
+
+.modalOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modalContent {
+    background: white;
+    border-radius: 12px;
+    max-width: 900px;
+    max-height: 90vh;
+    overflow-y: auto;
+    position: relative;
+    padding: 2rem;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+}
+
+.closeButton {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: #e25930;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease;
+    z-index: 10;
+}
+
+    .closeButton:hover {
+        background-color: #c74d28;
+    }
+
+.modalBody {
+    margin-top: 1rem;
+}
+
+.modalHeader {
+    display: flex;
+    gap: 2rem;
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 2px solid #eee;
+}
+
+.modalArtwork {
+    width: 200px;
+    height: 280px;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.modalHeaderInfo {
+    flex: 1;
+}
+
+    .modalHeaderInfo h2 {
+        color: #333;
+        margin-bottom: 1rem;
+        font-size: 2rem;
+    }
+
+.genres {
+    color: #666;
+    margin-bottom: 1rem;
+    font-size: 1rem;
+}
+
+.stats {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    color: #555;
+}
+
+    .stats span {
+        font-size: 0.95rem;
+    }
+
+.description {
+    margin-bottom: 2rem;
+}
+
+    .description h3 {
+        color: #333;
+        margin-bottom: 0.75rem;
+        font-size: 1.3rem;
+    }
+
+    .description p {
+        color: #555;
+        line-height: 1.6;
+        text-align: left;
+    }
+
+.screenshots {
+    margin-bottom: 2rem;
+}
+
+    .screenshots h3 {
+        color: #333;
+        margin-bottom: 1rem;
+        font-size: 1.3rem;
+    }
+
+.screenshotsGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+}
+
+.screenshot {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 6px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.inventory {
+    margin-top: 2rem;
+    padding-top: 2rem;
+    border-top: 2px solid #eee;
+}
+
+    .inventory h3 {
+        color: #333;
+        margin-bottom: 1rem;
+        font-size: 1.3rem;
+    }
+
+.inventoryGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 1rem;
+}
+
+.inventoryCard {
+    padding: 1.5rem;
+    border-radius: 8px;
+    text-align: center;
+    border: 2px solid;
+}
+
+    .inventoryCard.available {
+        background-color: #d4edda;
+        border-color: #c3e6cb;
+    }
+
+    .inventoryCard.unavailable {
+        background-color: #f8d7da;
+        border-color: #f5c6cb;
+    }
+
+.platformName {
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+    color: #333;
+}
+
+.quantity {
+    margin-bottom: 1rem;
+    font-size: 0.95rem;
+    color: #555;
+}
+
+.rentButton {
+    width: 100%;
+    padding: 0.6rem 1rem;
+    background-color: #3b763b;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 0.95rem;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+}
+
+    .rentButton:hover {
+        background-color: #2f5f2f;
+    }
+
+.loginPromptButton {
+    width: 100%;
+    padding: 0.6rem 1rem;
+    background-color: #667eea;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 0.95rem;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+}
+
+    .loginPromptButton:hover {
+        background-color: #5568d3;
+    }
+
+.rentalSuccess {
+    background-color: #d4edda;
+    color: #155724;
+    padding: 1rem;
+    border-radius: 6px;
+    margin-bottom: 1rem;
+    text-align: center;
+    font-weight: 600;
+    border: 1px solid #c3e6cb;
+}
+
+.rentalError {
+    background-color: #f8d7da;
+    color: #721c24;
+    padding: 1rem;
+    border-radius: 6px;
+    margin-bottom: 1rem;
+    text-align: center;
+    font-weight: 600;
+    border: 1px solid #f5c6cb;
+}

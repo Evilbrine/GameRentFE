@@ -1,0 +1,102 @@
+.dashboardContainer {
+  background-color: white;
+  color: #333;
+  min-height: 85vh;
+  padding: 2rem;
+  font-family: "Segoe UI", sans-serif;
+  text-align: center;
+}
+
+.dashboardBar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(to right, #5a0000, #230000);
+    padding: 15px;
+}
+
+.dashboardContainer h1 {
+  margin-bottom: 1rem;
+  color: #333;
+  font-weight: bold;
+  font-size: 40px;
+}
+
+.dashboardContainer p {
+  margin-bottom: 2rem;
+  color: #555;
+}
+
+.dashboardContainer button {
+    padding: 0.8rem 1.2rem;
+    background-color: #e25930;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    height: 50px;
+    margin: 10px;
+}
+
+.dashboardBar button {
+    padding: 0.8rem 1.2rem;
+    background-color: #e25930;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    height: 50px;
+}
+
+.tileGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  padding: 2rem;
+}
+
+.tile {
+  background-color: #0077cc;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  padding: 2rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+  cursor: pointer;
+  width: 100%;
+  height: 280px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.tile:hover {
+  background-color: #005fa3;
+  transform: scale(1.02);
+}
+
+.tile2 {
+  background-color: #3b763b;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  padding: 2rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+  cursor: pointer;
+  width: 100%;
+  height: 280px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.tile2:hover {
+  background-color: #2f5f2f;
+  transform: scale(1.02);
+}
