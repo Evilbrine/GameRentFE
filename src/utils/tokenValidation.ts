@@ -4,6 +4,12 @@ import { getToken, removeToken } from "./auth";
 import { API_URL } from "./config";
 import { useEffect } from "react";
 import { useRouter } from "next/navigation";
+import { AppRouterInstance } from "next/dist/shared/lib/app-router-context.shared-runtime";
+
+interface TokenPayload {
+    exp?: number;
+    [key: string]: unknown;
+}
 
 /**
  * Validates if the current JWT token is still active
@@ -46,7 +52,7 @@ export async function validateToken(): Promise<boolean> {
  * Checks token validity and redirects to login if invalid
  * Use this in protected pages
  */
-export async function requireAuth(router: any): Promise<boolean> {
+export async function requireAuth(router: AppRouterInstance): Promise<boolean> {
     const isValid = await validateToken();
 
     if (!isValid) {
@@ -61,7 +67,7 @@ export async function requireAuth(router: any): Promise<boolean> {
  * Decodes JWT payload without verification (client-side only for expiry check)
  * Returns null if token is malformed
  */
-export function decodeToken(token: string): any {
+export function decodeToken(token: string): TokenPayload | null {
     try {
         const base64Url = token.split('.')[1];
         const base64 = base64Url.replace(/-/g, '+').replace(/_/g, '/');
@@ -71,7 +77,7 @@ export function decodeToken(token: string): any {
                 .map((c) => '%' + ('00' + c.charCodeAt(0).toString(16)).slice(-2))
                 .join('')
         );
-        return JSON.parse(jsonPayload);
+        return JSON.parse(jsonPayload) as TokenPayload;
     } catch (error) {
         console.error("Error decoding token:", error);
         return null;
@@ -128,7 +134,7 @@ export function useAuthValidation(checkInterval: number = 60000) {
  * Auto-logout if token is expired (synchronous check)
  * Call this in useEffect on protected pages for immediate check
  */
-export function useTokenExpiration(router: any) {
+export function useTokenExpiration(router: AppRouterInstance) {
     const token = getToken();
 
     if (token && isTokenExpired(token)) {

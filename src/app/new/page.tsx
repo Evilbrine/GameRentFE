@@ -40,7 +40,6 @@ export default function Dashboard() {
     const fetchInitialGames = async () => {
         setLoading(true);
         try {
-            // Fetch first 3 pages (9 games total) at once
             const promises = [];
             for (let page = 1; page <= 3; page++) {
                 promises.push(
@@ -69,9 +68,8 @@ export default function Dashboard() {
 
             console.log("Total unique games loaded:", allGames.length);
             setGames(allGames);
-            setCurrentPage(3); // We've loaded pages 1-3
+            setCurrentPage(3);
 
-            // Get total pages from the first response
             if (results[0]) {
                 setTotalPages(results[0].meta.total_pages);
             }
@@ -91,7 +89,6 @@ export default function Dashboard() {
             const existingIds = new Set(games.map(g => g.id));
             let pageToFetch = currentPage + 1;
 
-            // Keep fetching pages until we have at least 3 new games or run out of pages
             while (newGames.length < ITEMS_PER_LOAD && pageToFetch <= totalPages) {
                 console.log(`Loading page ${pageToFetch}`);
                 const url = `${API_URL}/games/new?page=${pageToFetch}&limit=${ITEMS_PER_LOAD}`;

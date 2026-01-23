@@ -75,7 +75,6 @@ export default function Dashboard() {
     // Fetch available genres and platforms on mount
     useEffect(() => {
         fetchAvailableOptions();
-        // Check if user is logged in and validate token
         checkAuth();
     }, []);
 
@@ -90,12 +89,8 @@ export default function Dashboard() {
     };
 
     const fetchAvailableOptions = async () => {
-        // Since /games/filter doesn't return genres/platforms, 
-        // we'll use hardcoded lists based on your database
-        // This is more efficient than fetching individual games
 
         setAvailableGenres([
-            "Action",
             "Adventure",
             "Arcade",
             "Card & Board Game",
@@ -103,20 +98,16 @@ export default function Dashboard() {
             "Hack and slash/Beat 'em up",
             "Indie",
             "Music",
-            "Pinball",
             "Platform",
             "Point-and-click",
             "Puzzle",
             "Quiz/Trivia",
             "Racing",
-            "Real Time Strategy (RTS)",
-            "Role-playing (RPG)",
             "Shooter",
             "Simulator",
             "Sport",
             "Strategy",
             "Tactical",
-            "Turn-based strategy (TBS)",
             "Visual Novel"
         ]);
 
@@ -131,7 +122,6 @@ export default function Dashboard() {
             "PlayStation 3",
             "PlayStation 4",
             "PlayStation 5",
-            "SNES",
             "Wii U",
             "Xbox 360",
             "Xbox One",
